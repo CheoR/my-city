@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MyCityApp(name = "Moo cow Pug")
+                    MyCityApp()
                 }
             }
         }
