@@ -1,3 +1,104 @@
 <resources>
+    <!-- app -->
     <string name="app_name">My City</string>
+    <string name="list">List</string>
+    <string name="detail">Detail</string>
+    <string name="back_button">Back</string>
+
+    <!-- Categories -->
+    <string name="music">music</string>
+    <string name="food">"food"</string>
+    <string name="historical_and_cultural">historical and cultural</string>
+    <string name="outdoor_and_nature">outdoors and nature</string>
+    <string name="nightlife_and_entertainment">nightlife and entertainment</string>
+
+    <!-- Music and Entertainment -->
+
+    <!-- Music and Entertainment -->
+    <string name="music_entertainment_1">Grand Ole Opry: Iconic country music show featuring legendary and contemporary artists.</string>
+    <string name="music_entertainment_2">Ryman Auditorium: Historic venue known as the "Mother Church of Country Music."</string>
+    <string name="music_entertainment_3">Country Music Hall of Fame and Museum: Explore the history and culture of country music.</string>
+    <string name="music_entertainment_4">Bluebird Cafe: Intimate setting for singer-songwriter performances and storytelling.</string>
+    <string name="music_entertainment_5">The Listening Room Cafe: Live music and delicious food in an intimate, acoustic setting.</string>
+    <string name="music_entertainment_6">Tootsie\'s Orchid Lounge: Honky-tonk bar with a rich history and vibrant live music scene.</string>
+    <string name="music_entertainment_7">The Station Inn: Bluegrass hub with renowned musicians and a laid-back atmosphere.</string>
+    <string name="music_entertainment_8">Exit/In: Iconic music venue hosting diverse acts and bands since the 1970s.</string>
+    <string name="music_entertainment_9">The Basement East: Trendy spot for indie bands and a lively music experience.</string>
+    <string name="music_entertainment_10">Marathon Music Works: Versatile event space showcasing concerts and special events.</string>
+    <string name="music_entertainment_11">Mercy Lounge: Three-level venue offering a mix of live music and DJ nights.</string>
+    <string name="music_entertainment_12">3rd and Lindsley: Live music venue with a focus on local and national artists.</string>
+    <string name="music_entertainment_13">The Crying Wolf: Eclectic bar with live music, craft cocktails, and a relaxed vibe.</string>
+    <string name="music_entertainment_14">Bourbon Street Blues &amp; Boogie Bar: Live blues music and New Orleans-inspired ambiance.</string>
+    <string name="music_entertainment_15">Belcourt Taps: Gastropub with live music, local beers, and a cozy atmosphere.</string>
+
+    <!-- Food and Dining -->
+    <string name="food_dining_1">Hattie B\'s Hot Chicken: Famous for its spicy Nashville hot chicken.</string>
+    <string name="food_dining_2">Prince\'s Hot Chicken Shack: Historic spot known for its original hot chicken recipe.</string>
+    <string name="food_dining_3">Loveless Cafe: Southern comfort food and renowned biscuits.</string>
+    <string name="food_dining_4">The Pancake Pantry: Longtime breakfast spot offering a variety of pancake creations.</string>
+    <string name="food_dining_5">Rolf and Daughters: Innovative cuisine with a focus on locally sourced ingredients.</string>
+    <string name="food_dining_6">Husk Nashville: Farm-to-table Southern dishes in a historic setting.</string>
+    <string name="food_dining_7">Arnold\'s Country Kitchen: Meat-and-three cafeteria with classic Southern fare.</string>
+    <string name="food_dining_8">Biscuit Love: Popular eatery serving creative biscuit dishes.</string>
+    <string name="food_dining_9">Martin\'s Bar-B-Que Joint: Delicious barbecue with a variety of smoked meats.</string>
+    <string name="food_dining_10">Peg Leg Porker: BBQ joint known for its mouthwatering ribs and sauces.</string>
+    <string name="food_dining_11">Monell\'s Dining &amp; Catering: Family-style Southern meals in a communal setting.</string>
+    <string name="food_dining_12">Germantown Cafe: Modern American cuisine in Nashville\'s historic Germantown.</string>
+    <string name="food_dining_13">The Southern Steak &amp; Oyster: Upscale Southern dining with seafood and steaks.</string>
+    <string name="food_dining_14">Butcher &amp; Bee: Creative sandwiches and small plates made from scratch.</string>
+    <string name="food_dining_15">Jack\'s Bar-B-Que: Downtown barbecue spot with a variety of smoked meats.</string>
+
+    <!-- Historical and Cultural Sites -->
+    <string name="historical_cultural_1">The Hermitage: Former home of President Andrew Jackson, showcasing history and artifacts.</string>
+    <string name="historical_cultural_2">Belle Meade Plantation: Historic mansion offering tours and insights into plantation life.</string>
+    <string name="historical_cultural_3">Frist Art Museum: Contemporary art exhibits in a stunning historic post office building.</string>
+    <string name="historical_cultural_4">Andrew Jackson\'s Hermitage: Preserved home and grounds of the 7th U.S. President.</string>
+    <string name="historical_cultural_5">The Parthenon: Full-scale replica of the Greek Parthenon, housing art and sculptures.</string>
+    <string name="historical_cultural_6">Cheekwood Estate &amp; Gardens: Elegant mansion with art exhibitions and lush gardens.</string>
+    <string name="historical_cultural_7">Tennessee State Museum: Exhibits detailing the state\'s history, culture, and heritage.</string>
+    <string name="historical_cultural_8">Fort Negley Park and Visitors Center: Civil War fort with educational exhibits.</string>
+    <string name="historical_cultural_9">RCA Studio B: Historic recording studio where Elvis and others recorded hits.</string>
+    <string name="historical_cultural_10">Hatch Show Print: Legendary letterpress print shop producing iconic posters.</string>
+    <string name="historical_cultural_11">Printers Alley: Historic district with bars, music venues, and a vibrant atmosphere.</string>
+    <string name="historical_cultural_12">Civil Rights Room &amp; Collection at Nashville Public Library: Archives documenting civil rights history.</string>
+    <string name="historical_cultural_13">Historic Second Avenue: Cobblestone street lined with shops, restaurants, and history.</string>
+    <string name="historical_cultural_14">Fort Nashborough: Replica of Nashville\'s first settlement and a glimpse into pioneer life.</string>
+    <string name="historical_cultural_15">Musicians Hall of Fame and Museum: Celebrates musicians from all genres and eras.</string>
+
+    <!-- Outdoor and Nature Activities -->
+    <string name="outdoor_nature_1">Centennial Park: Urban park with walking trails, gardens, and the iconic Parthenon.</string>
+    <string name="outdoor_nature_2">Percy Warner Park: Picturesque park with hiking trails and scenic vistas.</string>
+    <string name="outdoor_nature_3">Edwin and Percy Warner Parks: Two parks offering nature trails, golf, and equestrian activities.</string>
+    <string name
+
+        ="outdoor_nature_4">Radnor Lake State Park: Nature preserve with trails and wildlife observation.</string>
+    <string name="outdoor_nature_5">Shelby Bottoms Greenway: Riverside trails for biking, walking, and bird-watching.</string>
+    <string name="outdoor_nature_6">Cumberland River Pedestrian Bridge: Iconic bridge offering views of downtown Nashville.</string>
+    <string name="outdoor_nature_7">Nashville Zoo at Grassmere: Family-friendly zoo featuring animals from around the world.</string>
+    <string name="outdoor_nature_8">Adventure Science Center: Hands-on science exhibits and interactive experiences.</string>
+    <string name="outdoor_nature_9">Bicentennial Capitol Mall State Park: Historical landmarks and educational exhibits.</string>
+    <string name="outdoor_nature_10">Nashville B-Cycle: Bike-sharing program to explore the city\'s neighborhoods.</string>
+    <string name="outdoor_nature_11">Arrington Vineyards: Picturesque winery offering wine tastings and live music.</string>
+    <string name="outdoor_nature_12">Cheatham Wildlife Management Area: Hunting, fishing, and wildlife observation.</string>
+    <string name="outdoor_nature_13">Harpeth River State Park: Canoeing, hiking, and historic sites along the Harpeth River.</string>
+    <string name="outdoor_nature_14">Moss-Wright Park: Playgrounds, trails, and historical structures in Goodlettsville.</string>
+    <string name="outdoor_nature_15">Long Hunter State Park: Lakeside park with boating, fishing, and hiking.</string>
+
+    <!-- Nightlife and Entertainment -->
+    <string name="nightlife_entertainment_1">Broadway Honky Tonks: Famous strip with lively bars and live country music.</string>
+    <string name="nightlife_entertainment_2">Acme Feed &amp; Seed: Rooftop bar and live music venue on Lower Broadway.</string>
+    <string name="nightlife_entertainment_3">L.A. Jackson: Chic rooftop bar offering skyline views and craft cocktails.</string>
+    <string name="nightlife_entertainment_4">The Patterson House: Speakeasy-style bar known for its creative craft cocktails.</string>
+    <string name="nightlife_entertainment_5">Red Door Saloon: Local dive bar with a friendly atmosphere and live music.</string>
+    <string name="nightlife_entertainment_6">The Bluebird Cafe: Intimate venue for singer-songwriters and acoustic performances.</string>
+    <string name="nightlife_entertainment_7">The Sutler Saloon: Historic spot with live music, Southern food, and craft drinks.</string>
+    <string name="nightlife_entertainment_8">No. 308: Trendy cocktail lounge with a unique and ever-changing menu.</string>
+    <string name="nightlife_entertainment_9">The 5 Spot: Eclectic dive bar featuring live music and dancing.</string>
+    <string name="nightlife_entertainment_10">Pinewood Social: Social club with bowling, cocktails, and inventive Southern fare.</string>
+    <string name="nightlife_entertainment_11">The Station Inn: Bluegrass hub hosting legendary acts in a cozy setting.</string>
+    <string name="nightlife_entertainment_12">Belcourt Taps: Laid-back gastropub with craft beers, live music, and patio seating.</string>
+    <string name="nightlife_entertainment_13">Rudy\'s Jazz Room: Intimate jazz club featuring local and touring musicians.</string>
+    <string name="nightlife_entertainment_14">Santa\'s Pub: Quirky karaoke spot located in a trailer, beloved by locals.</string>
+    <string name="nightlife_entertainment_15">The Basement East: Dynamic venue showcasing indie bands and energetic performances.</string>
+
 </resources>
