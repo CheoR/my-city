@@ -108,7 +108,8 @@ fun MyCityTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        shapes = Shapes, // from Shape.kt
+        typography = Typography, // from Type.kt
         content = content
     )
 }
