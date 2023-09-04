@@ -8,9 +8,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.mycity.model.Category
 
 @Composable
 fun MyCityScreen (
+    categories: List<Category>,
     name: String,
 //    onNextButtonClicked: (Int) -> Unit,
     onNextButtonClicked: () -> Unit,
@@ -20,15 +22,15 @@ fun MyCityScreen (
         text = "Hello $name! Go eat!",
         modifier = modifier
     )
-    Button(
-        onClick = onNextButtonClicked,
-        modifier = modifier
-            .widthIn(min = 250.dp),
-        colors = ButtonDefaults.buttonColors(
-            contentColor = MaterialTheme.colorScheme.onPrimary,
-            containerColor = MaterialTheme.colorScheme.onBackground,
-        ),
-    ) {
-        Text("Next")// stringResource(labelResourceId))
-    }
+        Button(
+            onClick = onNextButtonClicked,
+            modifier = modifier
+                .widthIn(min = 250.dp),
+            colors = ButtonDefaults.buttonColors(
+                contentColor = MaterialTheme.colorScheme.onPrimary,
+                containerColor = MaterialTheme.colorScheme.onBackground,
+            ),
+        ) {
+            Text("Next")// stringResource(labelResourceId))
+        }
 }
