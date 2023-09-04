@@ -13,11 +13,13 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -72,6 +74,9 @@ fun MyCityApp(
     val currentScreen = Screen.valueOf(
         backStackEntry?.destination?.route ?: Screen.Start.name
     )
+    val viewModel: CategoryViewModel = viewModel()
+    val uiState by viewModel.uiState.collectAsState()
+
     Scaffold(
         topBar = {
             MyCityAppBar(
@@ -88,6 +93,7 @@ fun MyCityApp(
         ) {
             composable(route = Screen.Start.name) {
                 MyCityScreen(
+                    categories = uiState.categoryList,
                     name="Oink oink  oink little piggy",
                     onNextButtonClicked = {
     //                viewModel.setQuantity(it)
