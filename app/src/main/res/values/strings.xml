@@ -1,8 +1,12 @@
 <resources>
     <!-- app -->
     <string name="app_name">My City</string>
-    <string name="list">List</string>
-    <string name="detail">Detail</string>
+    <string name="category_list">Categories</string>
+    <string name="attraction_list">Attractions</string>
+    <string name="test">%s Attractions</string>
+    <string name="attraction_detail">Detail</string>
+<!--    <string name="attraction_list">%s Attractions</string>-->
+<!--    <string name="attraction_detail">%s</string>-->
     <string name="back_button">Back</string>
 
     <!-- Categories -->
