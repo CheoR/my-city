@@ -14,22 +14,22 @@ object LocalCategoryDataProvider {
                 imageResourceId = R.drawable.placeholder,
             ),
             Category(
-                id =  1,
+                id =  2,
                 categoryResourceId = R.string.food,
                 imageResourceId = R.drawable.placeholder,
             ),
             Category(
-                id =  1,
+                id =  3,
                 categoryResourceId = R.string.historical_and_cultural,
                 imageResourceId = R.drawable.placeholder,
             ),
             Category(
-                id =  1,
+                id =  4,
                 categoryResourceId = R.string.outdoor_and_nature,
                 imageResourceId = R.drawable.placeholder,
             ),
             Category(
-                id =  1,
+                id =  5,
                 categoryResourceId = R.string.nightlife_and_entertainment,
                 imageResourceId = R.drawable.placeholder,
             ),
