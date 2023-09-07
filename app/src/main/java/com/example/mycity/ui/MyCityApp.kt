@@ -12,13 +12,13 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -26,11 +26,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mycity.R
+import com.example.mycity.utils.ScreenContentType
+import com.example.mycity.utils.ScreenNavigationType
 
+// TODO: pass extra string to title
 enum class Screen(@StringRes val title: Int) {
-    Start(title = R.string.app_name),
-    List(title = R.string.list),
-    Detail(title = R.string.detail),
+    CategoryListScreen(title = R.string.app_name),
+    AttractionListScreen(title = R.string.attraction_list),
+    AttractionDetailScreen(title = R.string.attraction_detail),
 }
 
 @Composable
@@ -61,21 +64,53 @@ fun MyCityAppBar(
 
 @Composable
 fun MyCityApp(
-//    viewModel: ScreenViewModel = viewModel(),
+    // TODO: figure out one one example initializes viewmodel as parameter and another
+    // initializes in the body
+    // viewModel: ScreenViewModel = viewModel(),
+    windowSize: WindowWidthSizeClass,
+    modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    modifier: Modifier = Modifier
 ) {
     /*
     show Up button only  if there's a composable on the back stack
     If the app has no screens on the back stack show StartOrderScreen and hidethe Up button
     To check this, you need a reference to the back stack.
- */
+    */
+
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentScreen = Screen.valueOf(
-        backStackEntry?.destination?.route ?: Screen.Start.name
+        backStackEntry?.destination?.route ?: Screen.CategoryListScreen.name
     )
-    val viewModel: CategoryViewModel = viewModel()
-    val uiState by viewModel.uiState.collectAsState()
+
+    /*
+        To implement navigation drawer, determine navigation type based on the app's window size.
+    */
+    val navigationType: ScreenNavigationType
+
+    /*
+        For various window sizes to help determine the appropriate content type selection,
+        depending on the screen size
+     */
+    val contentType: ScreenContentType
+
+    when (windowSize) {
+        WindowWidthSizeClass.Compact -> {
+            navigationType = ScreenNavigationType.BOTTOM_NAVIGATION
+            contentType = ScreenContentType.LIST_ONLY
+        }
+        WindowWidthSizeClass.Medium -> {
+            navigationType = ScreenNavigationType.NAVIGATION_RAIL
+            contentType = ScreenContentType.LIST_ONLY
+        }
+        WindowWidthSizeClass.Expanded -> {
+            navigationType = ScreenNavigationType.PERMANENT_NAVIGATION_DRAWER
+            contentType = ScreenContentType.LIST_AND_DETAIL
+        }
+        else -> {
+            navigationType = ScreenNavigationType.BOTTOM_NAVIGATION
+            contentType = ScreenContentType.LIST_ONLY
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -86,18 +121,25 @@ fun MyCityApp(
             )
         }
     ) { innerPadding ->
+
+        val viewModel: ScreenViewModel = viewModel()
+
+        // TODO: figure why why .value
+        // val replyUiState = viewModel.uiState.collectAsState().value
+        val uiState by viewModel.uiState.collectAsState()
+
         NavHost(
             navController = navController,
-            startDestination = Screen.Start.name,
+            startDestination = Screen.CategoryListScreen.name,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable(route = Screen.Start.name) {
-                MyCityScreen(
+            composable(route = Screen.CategoryListScreen.name) {
+                CategoryListScreen(
                     categories = uiState.categoryList,
-                    name="Oink oink  oink little piggy",
-                    onNextButtonClicked = {
-    //                viewModel.setQuantity(it)
-                        navController.navigate(Screen.List.name)
+                    title = stringResource(id = R.string.category_list),
+                    onClick = {
+                        viewModel.updateCurrentCategory(it)
+                        navController.navigate(Screen.AttractionListScreen.name)
                     },
                     modifier = Modifier
                         .fillMaxSize()
@@ -105,11 +147,13 @@ fun MyCityApp(
                 )
             }
 
-            composable(route = Screen.List.name) {
-                ListScreen(
-                    onNextButtonClicked = {
+            composable(route = Screen.AttractionListScreen.name) {
+                AttractionListScreen(
+                    attractions = uiState.categoryList,
+                    title = stringResource(R.string.test, "Cats"),
+                    onClick = {
                         //                viewModel.setQuantity(it)
-                        navController.navigate(Screen.Detail.name)
+                        navController.navigate(Screen.AttractionDetailScreen.name)
                     },
                     modifier = Modifier
                         .fillMaxSize()
@@ -117,11 +161,13 @@ fun MyCityApp(
                 )
             }
 
-            composable(route = Screen.Detail.name) {
-                ListScreen(
+            composable(route = Screen.AttractionDetailScreen.name) {
+                AttractionDetailScreen(
+                    attraction = uiState.categoryList[0],
+                    title = stringResource(id = R.string.attraction_detail, "Selected Attraction Detail"),
                     onNextButtonClicked = {
                         //                viewModel.setQuantity(it)
-                        navController.navigate(Screen.Start.name)
+                        navController.navigate(Screen.CategoryListScreen.name)
                     },
                     modifier = Modifier
                         .fillMaxSize()
@@ -131,11 +177,3 @@ fun MyCityApp(
         }
     }
 }
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    MyCityTheme {
-//        MyCityApp("Oink")
-//    }
-//}
