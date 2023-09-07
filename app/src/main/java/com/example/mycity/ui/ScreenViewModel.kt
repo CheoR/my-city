@@ -5,21 +5,27 @@ import com.example.mycity.data.LocalCategoryDataProvider
 import com.example.mycity.model.Category
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.update
 
-class CategoryViewModel : ViewModel() {
+class ScreenViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(
-        CategoryUiState(
+        ScreenUiState(
             categoryList = LocalCategoryDataProvider.getCategoryData(),
             currentCategory = LocalCategoryDataProvider.getCategoryData().getOrElse(0) {
                 LocalCategoryDataProvider.defaultCategory
             }
         )
     )
-    val uiState: StateFlow<CategoryUiState> = _uiState
+    val uiState: StateFlow<ScreenUiState> = _uiState
+
+    fun updateCurrentCategory(selectedCategory: Category) {
+        _uiState.update {
+            it.copy(currentCategory = selectedCategory)
+        }
+    }
 }
 
-data class CategoryUiState(
+data class ScreenUiState(
     val categoryList: List<Category> = emptyList(),
     val currentCategory: Category = LocalCategoryDataProvider.defaultCategory,
-//    val isShowingListPage: Boolean = true
 )
