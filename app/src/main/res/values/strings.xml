@@ -8,6 +8,8 @@
 <!--    <string name="attraction_list">%s Attractions</string>-->
 <!--    <string name="attraction_detail">%s</string>-->
     <string name="back_button">Back</string>
+    <string name="home">Home</string>
+
 
     <!-- Categories -->
     <string name="music">music</string>
