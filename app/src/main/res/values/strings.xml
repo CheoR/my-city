@@ -19,6 +19,22 @@
     <!-- Music and Entertainment -->
 
     <!-- Music and Entertainment -->
+    <string name="music_entertainment_title_1">Grand Ole Opry</string>
+    <string name="music_entertainment_title_2">Ryman Auditorium</string>
+    <string name="music_entertainment_title_3">Country Music Hall of Fame and Museum</string>
+    <string name="music_entertainment_title_4">Bluebird Cafe</string>
+    <string name="music_entertainment_title_5">The Listening Room Cafe</string>
+    <string name="music_entertainment_title_6">Tootsie\'s Orchid Lounge</string>
+    <string name="music_entertainment_title_7">The Station Inn</string>
+    <string name="music_entertainment_title_8">Exit/In</string>
+    <string name="music_entertainment_title_9">The Basement East</string>
+    <string name="music_entertainment_title_10">Marathon Music Works</string>
+    <string name="music_entertainment_title_11">Mercy Lounge</string>
+    <string name="music_entertainment_title_12">3rd and Lindsley</string>
+    <string name="music_entertainment_title_13">The Crying Wolf</string>
+    <string name="music_entertainment_title_14">Bourbon Street Blues &amp; Boogie Bar</string>
+    <string name="music_entertainment_title_15">Belcourt Taps</string>
+
     <string name="music_entertainment_1">Grand Ole Opry: Iconic country music show featuring legendary and contemporary artists.</string>
     <string name="music_entertainment_2">Ryman Auditorium: Historic venue known as the "Mother Church of Country Music."</string>
     <string name="music_entertainment_3">Country Music Hall of Fame and Museum: Explore the history and culture of country music.</string>
@@ -36,6 +52,22 @@
     <string name="music_entertainment_15">Belcourt Taps: Gastropub with live music, local beers, and a cozy atmosphere.</string>
 
     <!-- Food and Dining -->
+    <string name="food_dining_title_1">Hattie B\'s Hot Chicken</string>
+    <string name="food_dining_title_2">Prince\'s Hot Chicken Shack</string>
+    <string name="food_dining_title_3">Loveless Cafe</string>
+    <string name="food_dining_title_4">The Pancake Pantry</string>
+    <string name="food_dining_title_5">Rolf and Daughters</string>
+    <string name="food_dining_title_6">Husk Nashville</string>
+    <string name="food_dining_title_7">Arnold\'s Country Kitchen</string>
+    <string name="food_dining_title_8">Biscuit Love</string>
+    <string name="food_dining_title_9">Martin\'s Bar-B-Que Joint</string>
+    <string name="food_dining_title_10">Peg Leg Porker</string>
+    <string name="food_dining_title_11">Monell\'s Dining &amp; Catering</string>
+    <string name="food_dining_title_12">Germantown Cafe</string>
+    <string name="food_dining_title_13">The Southern Steak &amp; Oyster</string>
+    <string name="food_dining_title_14">Butcher &amp; Bee</string>
+    <string name="food_dining_title_15">Jack\'s Bar-B-Que</string>
+
     <string name="food_dining_1">Hattie B\'s Hot Chicken: Famous for its spicy Nashville hot chicken.</string>
     <string name="food_dining_2">Prince\'s Hot Chicken Shack: Historic spot known for its original hot chicken recipe.</string>
     <string name="food_dining_3">Loveless Cafe: Southern comfort food and renowned biscuits.</string>
@@ -53,6 +85,22 @@
     <string name="food_dining_15">Jack\'s Bar-B-Que: Downtown barbecue spot with a variety of smoked meats.</string>
 
     <!-- Historical and Cultural Sites -->
+    <string name="historical_cultural_title_1">The Hermitage</string>
+    <string name="historical_cultural_title_2">Belle Meade Plantation</string>
+    <string name="historical_cultural_title_3">Frist Art Museum</string>
+    <string name="historical_cultural_title_4">Andrew Jackson\'s Hermitage</string>
+    <string name="historical_cultural_title_5">The Parthenon</string>
+    <string name="historical_cultural_title_6">Cheekwood Estate &amp; Gardens</string>
+    <string name="historical_cultural_title_7">Tennessee State Museum</string>
+    <string name="historical_cultural_title_8">Fort Negley Park and Visitors Center</string>
+    <string name="historical_cultural_title_9">RCA Studio B</string>
+    <string name="historical_cultural_title_10">Hatch Show Print</string>
+    <string name="historical_cultural_title_11">Printers Alley</string>
+    <string name="historical_cultural_title_12">Civil Rights Room &amp; Collection at Nashville Public Library</string>
+    <string name="historical_cultural_title_13">Historic Second Avenue</string>
+    <string name="historical_cultural_title_14">Fort Nashborough</string>
+    <string name="historical_cultural_title_15">Musicians Hall of Fame and Museum</string>
+
     <string name="historical_cultural_1">The Hermitage: Former home of President Andrew Jackson, showcasing history and artifacts.</string>
     <string name="historical_cultural_2">Belle Meade Plantation: Historic mansion offering tours and insights into plantation life.</string>
     <string name="historical_cultural_3">Frist Art Museum: Contemporary art exhibits in a stunning historic post office building.</string>
@@ -70,6 +118,24 @@
     <string name="historical_cultural_15">Musicians Hall of Fame and Museum: Celebrates musicians from all genres and eras.</string>
 
     <!-- Outdoor and Nature Activities -->
+    <string name="outdoor_nature_title_1">Centennial Park</string>
+    <string name="outdoor_nature_title_2">Percy Warner Park</string>
+    <string name="outdoor_nature_title_3">Edwin and Percy Warner Parks</string>
+    <string name
+
+        ="outdoor_nature_title_4">Radnor Lake State Park</string>
+    <string name="outdoor_nature_title_5">Shelby Bottoms Greenwayand bird-watching.</string>
+    <string name="outdoor_nature_title_6">Cumberland River Pedestrian Bridge</string>
+    <string name="outdoor_nature_title_7">Nashville Zoo at Grassmere</string>
+    <string name="outdoor_nature_title_8">Adventure Science Center</string>
+    <string name="outdoor_nature_title_9">Bicentennial Capitol Mall State Park</string>
+    <string name="outdoor_nature_title_10">Nashville B-Cycle</string>
+    <string name="outdoor_nature_title_11">Arrington Vineyards</string>
+    <string name="outdoor_nature_title_12">Cheatham Wildlife Management Area</string>
+    <string name="outdoor_nature_title_13">Harpeth River State Park</string>
+    <string name="outdoor_nature_title_14">Moss-Wright Park</string>
+    <string name="outdoor_nature_title_15">Long Hunter State Park</string>
+
     <string name="outdoor_nature_1">Centennial Park: Urban park with walking trails, gardens, and the iconic Parthenon.</string>
     <string name="outdoor_nature_2">Percy Warner Park: Picturesque park with hiking trails and scenic vistas.</string>
     <string name="outdoor_nature_3">Edwin and Percy Warner Parks: Two parks offering nature trails, golf, and equestrian activities.</string>
@@ -89,6 +155,22 @@
     <string name="outdoor_nature_15">Long Hunter State Park: Lakeside park with boating, fishing, and hiking.</string>
 
     <!-- Nightlife and Entertainment -->
+    <string name="nightlife_entertainment_title_1">Broadway Honky Tonks</string>
+    <string name="nightlife_entertainment_title_2">Acme Feed &amp; Seed</string>
+    <string name="nightlife_entertainment_title_3">L.A. Jackson</string>
+    <string name="nightlife_entertainment_title_4">The Patterson House</string>
+    <string name="nightlife_entertainment_title_5">Red Door Saloon</string>
+    <string name="nightlife_entertainment_title_6">The Bluebird Cafe</string>
+    <string name="nightlife_entertainment_title_7">The Sutler Saloon</string>
+    <string name="nightlife_entertainment_title_8">No. 308</string>
+    <string name="nightlife_entertainment_title_9">The 5 Spot</string>
+    <string name="nightlife_entertainment_title_10">Pinewood Social</string>
+    <string name="nightlife_entertainment_title_11">The Station Inn</string>
+    <string name="nightlife_entertainment_title_12">Belcourt Taps</string>
+    <string name="nightlife_entertainment_title_13">Rudy\'s Jazz Room</string>
+    <string name="nightlife_entertainment_title_14">Santa\'s Pub</string>
+    <string name="nightlife_entertainment_title_15">The Basement East</string>
+
     <string name="nightlife_entertainment_1">Broadway Honky Tonks: Famous strip with lively bars and live country music.</string>
     <string name="nightlife_entertainment_2">Acme Feed &amp; Seed: Rooftop bar and live music venue on Lower Broadway.</string>
     <string name="nightlife_entertainment_3">L.A. Jackson: Chic rooftop bar offering skyline views and craft cocktails.</string>
