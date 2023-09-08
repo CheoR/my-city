@@ -11,14 +11,9 @@ import com.example.mycity.model.Category
 @Composable
 fun AttractionDetailScreen(
     attraction: Category,
-    title: String,
     modifier: Modifier = Modifier,
     onNextButtonClicked: () -> Unit = {},
 ) {
-    Text(
-        modifier = modifier,
-        text = "Detail Screen!",
-    )
     Button(
         onClick = onNextButtonClicked,
         modifier = modifier.widthIn(min = 250.dp)
