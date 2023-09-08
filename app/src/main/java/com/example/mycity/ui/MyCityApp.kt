@@ -26,6 +26,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mycity.R
+import com.example.mycity.model.Category
 import com.example.mycity.utils.ScreenContentType
 import com.example.mycity.utils.ScreenNavigationType
 
@@ -112,21 +113,25 @@ fun MyCityApp(
         }
     }
 
+
+    val viewModel: ScreenViewModel = viewModel()
+
+    // TODO: figure why why .value
+    // val replyUiState = viewModel.uiState.collectAsState().value
+    val uiState by viewModel.uiState.collectAsState()
+
     Scaffold(
         topBar = {
             MyCityAppBar(
                 currentScreen = currentScreen,
                 canNavigateBack = navController.previousBackStackEntry != null,
-                navigateUp = {  navController.navigateUp() }
+                navigateUp = {
+                    viewModel.resetCategories()
+                    navController.navigateUp()
+                }
             )
         }
     ) { innerPadding ->
-
-        val viewModel: ScreenViewModel = viewModel()
-
-        // TODO: figure why why .value
-        // val replyUiState = viewModel.uiState.collectAsState().value
-        val uiState by viewModel.uiState.collectAsState()
 
         NavHost(
             navController = navController,
@@ -137,8 +142,8 @@ fun MyCityApp(
                 CategoryListScreen(
                     categories = uiState.categoryList,
                     title = stringResource(id = R.string.category_list),
-                    onClick = {
-                        viewModel.updateCurrentCategory(it)
+                    onCategoryClick = {
+                        viewModel.updateCurrentCategory(it as Category)
                         navController.navigate(Screen.AttractionListScreen.name)
                     },
                     modifier = Modifier
@@ -149,10 +154,9 @@ fun MyCityApp(
 
             composable(route = Screen.AttractionListScreen.name) {
                 AttractionListScreen(
-                    attractions = uiState.categoryList,
-                    title = stringResource(R.string.test, "Cats"),
-                    onClick = {
-                        //                viewModel.setQuantity(it)
+                    attractions = uiState.attractionList,
+                    onAttractionClick = {
+//                        viewModel.setQuantity(it)
                         navController.navigate(Screen.AttractionDetailScreen.name)
                     },
                     modifier = Modifier
@@ -164,7 +168,6 @@ fun MyCityApp(
             composable(route = Screen.AttractionDetailScreen.name) {
                 AttractionDetailScreen(
                     attraction = uiState.categoryList[0],
-                    title = stringResource(id = R.string.attraction_detail, "Selected Attraction Detail"),
                     onNextButtonClicked = {
                         //                viewModel.setQuantity(it)
                         navController.navigate(Screen.CategoryListScreen.name)
