@@ -1,21 +1,18 @@
 package com.example.mycity.ui
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.mycity.model.Category
+import com.example.mycity.model.Attraction
 
 @Composable
 fun AttractionListScreen(
-    attractions: List<Category>,
-    title: String,
+    attractions: List<Attraction>,
 //    onNextButtonClicked: (Int) -> Unit,
-    onClick: (Category) -> Unit,
+    onAttractionClick: (Any) -> Unit,
     modifier: Modifier = Modifier
 ){
-    Text(text=title)
     BaseListScreen(
         list = attractions,
-        onClick = onClick,
+        onClick = onAttractionClick,
     )
 }
