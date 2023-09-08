@@ -23,13 +23,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mycity.R
 import com.example.mycity.data.LocalCategoryDataProvider
+import com.example.mycity.model.Attraction
 import com.example.mycity.model.Category
 import com.example.mycity.ui.theme.MyCityTheme
 
 @Composable
 fun BaseListScreen(
-    list: List<Category>,
-    onClick: (Category) -> Unit,
+    list: List<Any>,
+    onClick: (Any) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     LazyColumn(
@@ -37,25 +38,37 @@ fun BaseListScreen(
         verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
         modifier = modifier
     ) {
-        items(list, key = { item -> item.id }){ item ->
-            ListItem(
-                item = item,
-                onClick = onClick,
-            )
+
+        if(list[0] is Category) {
+            items(list, key = { item -> (item as Category).id }){ item ->
+                ListItem(
+                    item = item as Category,
+                    listItemClick = onClick,
+                )
+            }
+        } else {
+            items(list, key = { item -> (item as Attraction).id }){ item ->
+                ListItem(
+                    item = item as Attraction,
+                    listItemClick = onClick,
+                )
+            }
         }
     }
 }
 
 @Composable
 private fun ListItem(
-    item: Category,
-    onClick: (Category) -> Unit,
+    item: Any,
+    listItemClick: (Any) -> Unit,
 ) {
     Card(
         elevation = CardDefaults.cardElevation(),
         modifier = Modifier,
         shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
-        onClick = { onClick(item) },
+        onClick = {
+            listItemClick(item)
+                  },
     ) {
         Row(
             modifier= Modifier
@@ -65,12 +78,23 @@ private fun ListItem(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center,
         ) {
-            Text(
-                color = MaterialTheme.colorScheme.onSecondary,
-                style = MaterialTheme.typography.titleLarge,
-                text= stringResource(item.categoryResourceId),
-                modifier = Modifier
-            )
+
+            if(item is Category) {
+                Text(
+                    modifier = Modifier,
+                    color = MaterialTheme.colorScheme.onSecondary,
+                    style = MaterialTheme.typography.titleLarge,
+                    // No cast needed cause of if check
+                    text= stringResource(item.categoryResourceId),
+                )
+            } else {
+                Text(
+                    color = MaterialTheme.colorScheme.onSecondary,
+                    style = MaterialTheme.typography.titleLarge,
+                    text= stringResource((item as Attraction).attractionResourceId),
+                    modifier = Modifier
+                )
+            }
         }
     }
 }
