@@ -26,6 +26,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mycity.R
+import com.example.mycity.model.Attraction
 import com.example.mycity.model.Category
 import com.example.mycity.utils.ScreenContentType
 import com.example.mycity.utils.ScreenNavigationType
@@ -126,7 +127,6 @@ fun MyCityApp(
                 currentScreen = currentScreen,
                 canNavigateBack = navController.previousBackStackEntry != null,
                 navigateUp = {
-                    viewModel.resetCategories()
                     navController.navigateUp()
                 }
             )
@@ -139,9 +139,9 @@ fun MyCityApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(route = Screen.CategoryListScreen.name) {
+                viewModel.resetCategories()
                 CategoryListScreen(
                     categories = uiState.categoryList,
-                    title = stringResource(id = R.string.category_list),
                     onCategoryClick = {
                         viewModel.updateCurrentCategory(it as Category)
                         navController.navigate(Screen.AttractionListScreen.name)
@@ -156,7 +156,7 @@ fun MyCityApp(
                 AttractionListScreen(
                     attractions = uiState.attractionList,
                     onAttractionClick = {
-//                        viewModel.setQuantity(it)
+                        viewModel.updateCurrentAttraction(it as Attraction)
                         navController.navigate(Screen.AttractionDetailScreen.name)
                     },
                     modifier = Modifier
@@ -167,10 +167,9 @@ fun MyCityApp(
 
             composable(route = Screen.AttractionDetailScreen.name) {
                 AttractionDetailScreen(
-                    attraction = uiState.categoryList[0],
+                    attraction = uiState.currentAttraction,
                     onNextButtonClicked = {
-                        //                viewModel.setQuantity(it)
-                        navController.navigate(Screen.CategoryListScreen.name)
+                        navController.popBackStack(Screen.CategoryListScreen.name, inclusive = false)
                     },
                     modifier = Modifier
                         .fillMaxSize()
