@@ -9,7 +9,9 @@
 <!--    <string name="attraction_detail">%s</string>-->
     <string name="back_button">Back</string>
     <string name="home">Home</string>
-
+    <string name="screen_size_compact">599</string>
+    <string name="screen_size_medium">839</string>
+    <string name="screen_size_expanded">860</string>
 
     <!-- Categories -->
     <string name="music">music</string>

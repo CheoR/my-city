@@ -13,4 +13,8 @@
     <dimen name="padding_detail_content_vertical">24dp</dimen>
 
     <dimen name="topappbar_height">64dp</dimen>
+
+    <dimen name="screen_size_compact">599</dimen>
+    <dimen name="screen_size_medium">839</dimen>
+    <dimen name="screen_size_expanded">860</dimen>
 </resources>
