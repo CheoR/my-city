@@ -41,6 +41,12 @@ class ScreenViewModel : ViewModel() {
         setAttractionList(selectedCategory)
     }
 
+    fun updateCurrentAttraction(selectedAttraction: Attraction) {
+        _uiState.update {
+            it.copy(currentAttraction = selectedAttraction)
+        }
+    }
+
     fun resetCategories() {
         _uiState.value = ScreenUiState(
             categoryList = LocalCategoryDataProvider.getCategoryData(),
@@ -52,6 +58,14 @@ class ScreenViewModel : ViewModel() {
                 LocalAttractionDataProvider.defaultAttraction
             }
         )
+    }
+
+    fun resetAttractions() {
+        _uiState.update {
+            it.copy(
+                attractionList = LocalAttractionDataProvider.getAttractionData(),
+            )
+        }
     }
 }
 
